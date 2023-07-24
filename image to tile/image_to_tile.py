@@ -12,10 +12,6 @@ def convert_to_tiles(input_image_path, output_directory, num_tiles):
     tile_width = img_width // num_tiles
     tile_height = img_height // num_tiles
 
-    # Create the output directory if it doesn't exist
-    #if not os.path.exists(output_directory):
-        #os.makedirs(output_directory)
-
     # Extract and save each tile
     for i in range(num_tiles):
         for j in range(num_tiles):
@@ -30,6 +26,6 @@ def convert_to_tiles(input_image_path, output_directory, num_tiles):
 if __name__ == "__main__":
     input_image_path = "E:\Intership Training IRDE\luffy.jpg"
     output_directory = "E:\Intership Training IRDE\tiles"
-    num_tiles = 4 # You can change this number to the desired number of tiles
+    num_tiles = num_tiles = int(input("Enter Number of tiles : ")) #Enter Number of tiles-----> creates tiles as n*n
 
     convert_to_tiles(input_image_path, output_directory, num_tiles)

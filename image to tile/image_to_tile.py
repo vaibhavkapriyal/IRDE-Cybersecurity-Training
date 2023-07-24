@@ -24,7 +24,7 @@ def convert_to_tiles(input_image_path, output_directory, num_tiles):
             tile.save(tile_path)
 
 if __name__ == "__main__":
-    input_image_path = "E:\Intership Training IRDE\luffy.jpg"
+    input_image_path = "E:\Intership Training IRDE\original_image.jpg"
     output_directory = "E:\Intership Training IRDE\tiles"
     num_tiles = num_tiles = int(input("Enter Number of tiles : ")) #Enter Number of tiles-----> creates tiles as n*n
 

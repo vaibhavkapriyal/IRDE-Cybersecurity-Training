@@ -21,8 +21,8 @@ def convert_to_tiles(input_image_path, output_directory, num_tiles):
         for j in range(num_tiles):
             left = j * tile_width
             upper = i * tile_height
-            right = j * tile_width  # Corrected calculation for tile width
-            lower = i * tile_height  # Corrected calculation for tile height
+            right = left + tile_width
+            lower = upper + tile_height
             tile = img.crop((left, upper, right, lower))
             tile_path = os.path.join(output_directory, f"tile_{i}_{j}.png")
             tile.save(tile_path)
